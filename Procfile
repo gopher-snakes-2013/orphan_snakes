@@ -1,1 +1,1 @@
-'web: bundle exec ruby orphan_racer_app.rb -p $PORT'
+'web: bundle exec ruby star_wars_racer_app.rb -p $PORT'
