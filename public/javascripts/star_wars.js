@@ -1,23 +1,32 @@
-var typed_stuff = [];
-
-document.onkeypress = function(event){
-	var key_press,key_code;
-	
-	key_code = event.keyCode;
-	key_press = String.fromCharCode(event.keyCode);
-	typed_stuff.push(key_press);
-	$("#typed").html(typed_stuff.join(""));
-	// document.getElementById('typed').innerHTML =
-	// typed_stuff.join("");
-}
-
-document.onkeydown = function(event) {
-	var key_press, key_code;
-
-	key_code = event.keyCode;
-	key_press = String.fromCharCode(event.keyCode);
-	if(key_code === 8){
-		typed_stuff.pop();
-		$("#typed").html(typed_stuff.join(""));
+StarWarsRacerApp = {
+	keyLogger: {
+		keysPressed: [],
+		addKey: function(character) {
+			this.keysPressed.push(character);
+		},
+		typedStuff: function() {
+			return this.keysPressed.join("");
+		},
+		deleteLastKey: function() {
+			this.keysPressed.pop();
+		}
+	},
+	bindEvents: function() {
+		document.addEventListener('keypress', handleKeyPress);
+		document.addEventListener('keydown', handleKeyDown);
+	},
+	handleKeyDown: function(e) {
+		if(e.keyCode === 8){
+			this.keyLogger.deleteLastKey();
+			refreshView(keyLogger);
+		}
+	},
+	handleKeyPress: function(e) {
+		var character = String.fromCharCode(e.keyCode);
+		this.keyLogger.addKey(character);
+		this.refresh();
+	},
+	refresh: function() {
+		$('#typed').html(this.keylogger.typedStuff());
 	}
-}
+};
