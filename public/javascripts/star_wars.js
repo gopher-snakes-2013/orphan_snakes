@@ -7,7 +7,7 @@ $(window).keydown(function(e) {
 var Logger = {
 	race_text: [],
 	loadRaceText: function(){
-		return document.getElementById("race_text").innerText.split(""); 
+		return document.getElementById("race_text").innerText.split("");
 	},
 	removeFirstLetter: function(){
 		race_text.shift();
@@ -58,7 +58,7 @@ var StarWarsRacerApp ={
 		$("#typed").text(Logger.userProgress().join(""));
 	},
 	refreshErrors: function() {
-		$("#errors").text("Errors: " + Logger.errors);
+		$("#errors").text(Logger.errors);
 	},
 	bindKeyEvent: function(){
 		var self = this
