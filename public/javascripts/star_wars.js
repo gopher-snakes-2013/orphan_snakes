@@ -73,7 +73,7 @@ var StarWarsRacerApp ={
 		$("#typed").text(Logger.userProgress().join(""));
 	},
 	refreshErrors: function() {
-		$("#errors").text("Errors: " + Logger.errors);
+		$("#errors").text(Logger.errors);
 	},
 	refreshAccuracy: function(){
 		$("#accuracy").text("Accuracy: " + Logger.accuracy() + "%");
