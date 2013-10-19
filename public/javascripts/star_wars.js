@@ -47,7 +47,7 @@ var StarWarsRacerApp ={
 			this.refreshErrors();
 			this.refreshAccuracy();
 		}
-		if(race_text.length < 1){
+		if(race_text.length === 1){
 			this.displayRaceStats();
 		}
 	},
@@ -65,9 +65,9 @@ var StarWarsRacerApp ={
 		};
 	},
 	displayRaceStats: function(){
-		$("#race-stats").append("<h2> Congratulations on finishing the Star Wars Racer! </h2>");
-		$("#race-stats").append("<h2> You made a total of: "+Logger.errors+" errors </h2>");
-		$("#race-stats").append("<h3> You finished with an accuracy of: "+Logger.accuracy()+"%</h3>");
+		$(".race-stats").append("<div> Congratulations on finishing the Star Wars Racer! <br/></div>");
+		$(".race-stats").append("<div> You made a total of: <br/>"+Logger.errors+" errors </div>");
+		$(".race-stats").append("<div> You finished with an accuracy of: <br/>"+Logger.accuracy()+"%</div>");
 	},
 	refreshProgress: function(){
 		$("#typed").text(Logger.userProgress().join(""));

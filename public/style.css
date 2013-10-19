@@ -157,22 +157,22 @@ h1 span {
   position: absolute;
   top: 100%;
   opacity: 0.4;
-  -webkit-animation: scroll 150s linear 4s infinite;
-  -moz-animation: scroll 150s linear 4s infinite;
-  -ms-animation: scroll 150s linear 4s infinite;
-  -o-animation: scroll 150s linear 4s infinite;
-  animation: scroll 150s linear 4s infinite;
+  -webkit-animation: scroll 235s linear 4s infinite;
+  -moz-animation: scroll 235s linear 4s infinite;
+  -ms-animation: scroll 235s linear 4s infinite;
+  -o-animation: scroll 235s linear 4s infinite;
+  animation: scroll 235s linear 4s infinite;
 }
 
 #user_input {
   position: absolute;
   top: 100%;
   margin-top: 2.74em;
-  -webkit-animation: scroll 150s linear 4s infinite;
-  -moz-animation: scroll 150s linear 4s infinite;
-  -ms-animation: scroll 150s linear 4s infinite;
-  -o-animation: scroll 150s linear 4s infinite;
-  animation: scroll 150s linear 4s infinite;
+  -webkit-animation: scroll 235s linear 4s infinite;
+  -moz-animation: scroll 235s linear 4s infinite;
+  -ms-animation: scroll 235s linear 4s infinite;
+  -o-animation: scroll 235s linear 4s infinite;
+  animation: scroll 235s linear 4s infinite;
 }
 
 @-webkit-keyframes scroll {
@@ -233,4 +233,9 @@ iframe  {
   margin-left: 1em;
 }
 
+.race-stats {
+  margin-top: 3em;
+  text-align: center;
+
+}
 
