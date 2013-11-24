@@ -5,7 +5,6 @@ It's written in object-oriented JavaScript. It also makes heavy use of advanced 
 
 
 ##### Authors:
-==============
 * [Dan](https://github.com/Steveo1485)
 * [Brandon](https://github.com/ldrbrandon)
 * [Laura](https://github.com/shmeadyy)
