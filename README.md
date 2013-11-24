@@ -1,16 +1,16 @@
-orphan_snakes
-=============
-TypeRacer by Dan-Brandon-Laura-Ryan
-
-also, we miss topher :(
-
-
-starwarsracer.herokuapp.com
+A 3D-star-wars-typeracer
+========================
+The awesome Star Wars opening crawl from 1977 as a typeracer.
+It's written in object-oriented JavaScript. It also makes heavy use of advanced CSS 3 like animations, keyframes, or perspective transformations to achieve the desired 3d crawl effect. 
 
 
+##### Authors:
+--------------
+*[Dan](https://github.com/Steveo1485)*
+*[Brandon](https://github.com/ldrbrandon)*
+*[Laura](https://github.com/shmeadyy)*
+*[Ryan](https://github.com/RyanHedges)*
 
-Helpful resources:
 
-- events: http://www.quirksmode.org/js/introevents.html
 
-- capture keyboard input in javascript: http://www.developphp.com/view.php?tid=1243
+![Star Wars Typeracer](http://i2.minus.com/jUYPnizaTBpxM.jpg)
