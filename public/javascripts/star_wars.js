@@ -7,7 +7,7 @@ $(window).keydown(function(e) {
 var Logger = {
 	race_text: [],
 	loadRaceText: function(){
-		return document.getElementById("race_text").textContent.split("");
+	return document.getElementById("race_text").textContent.split("");
 	},
 	removeFirstLetter: function(){
 		race_text.shift();
@@ -20,6 +20,12 @@ var Logger = {
 	},
 	userProgress: function() {
 		return this.keysPressed;
+	},
+
+	accuracy: function() {
+		var total_race_letters = document.getElementById('race_text').innerText.split("").length;
+		var accuracy = ((total_race_letters - Logger.errors) / total_race_letters) * 100;
+		return Math.floor(accuracy);
 	}
 }
 
@@ -39,6 +45,10 @@ var StarWarsRacerApp ={
 		else {
 			this.logNewError();
 			this.refreshErrors();
+			this.refreshAccuracy();
+		}
+		if(race_text.length === 1){
+			this.displayRaceStats();
 		}
 	},
 	logNewError: function(){
@@ -54,11 +64,19 @@ var StarWarsRacerApp ={
 			return false;
 		};
 	},
+	displayRaceStats: function(){
+		$(".race-stats").append("<div> Congratulations on finishing the Star Wars Racer! <br/></div>");
+		$(".race-stats").append("<div> You made a total of: <br/>"+Logger.errors+" errors </div>");
+		$(".race-stats").append("<div> You finished with an accuracy of: <br/>"+Logger.accuracy()+"%</div>");
+	},
 	refreshProgress: function(){
 		$("#typed").text(Logger.userProgress().join(""));
 	},
 	refreshErrors: function() {
-		$("#errors").text("Errors: " + Logger.errors);
+		$("#errors").text(Logger.errors);
+	},
+	refreshAccuracy: function(){
+		$("#accuracy").text("Accuracy: " + Logger.accuracy() + "%");
 	},
 	bindKeyEvent: function(){
 		var self = this
