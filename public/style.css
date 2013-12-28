@@ -1,0 +1,239 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
+
+* { padding: 0; margin: 0; }
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', 'Helvetica', sans-serif;
+  font-weight: 800;
+  color: #fddb33;
+  background-color: #000;
+  background-image: url('/img/bg.png');
+  overflow: hidden;
+}
+
+#long_time_ago {
+  position: relative;
+  width: 14em;
+  margin: 20% auto;
+  color: #237bcd;
+  opacity: 0;
+  z-index: 1;
+  font-size: 200%;
+  font-weight: 400;
+  -webkit-animation: longtimeago 2s ease-out;
+  -moz-animation: longtimeago 2s ease-out;
+  -ms-animation: longtimeago 2s ease-out;
+  -o-animation: longtimeago 2s ease-out;
+  animation: longtimeago 2s ease-out;
+}
+
+@-webkit-keyframes longtimeago {
+  0% { opacity: 1; }
+  65% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-moz-keyframes longtimeago {
+  0% { opacity: 1; }
+  65% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-ms-keyframes longtimeago {
+  0% { opacity: 1; }
+  65% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes longtimeago {
+  0% { opacity: 1; }
+  65% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes longtimeago {
+  0% { opacity: 1; }
+  65% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  margin-left: -1.3em;
+  opacity: 0;
+  z-index: 1;
+  font-size: 10em;
+  line-height: 0.8em;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #000;
+  text-shadow: -3px -2px 0 #fddd42,
+                3px -2px 0 #fddd42,
+               -3px  2px 0 #fddd42,
+                3px  2px 0 #fddd42;
+  -webkit-animation: StarWars 5s ease-out 2.5s;
+  -moz-animation: StarWars 5s ease-out 2.5s;
+  -ms-animation: StarWars 5s ease-out 2.5s;
+  -o-animation: StarWars 5s ease-out 2.5s;
+  animation: StarWars 5s ease-out 2.5s;
+}
+
+h1 span {
+  margin-left: 0em;
+  letter-spacing: 0.0em;
+}
+
+@-webkit-keyframes StarWars {
+  0% { -webkit-transform: scale(1); opacity: 1; }
+  50% { opacity: 1; }
+  100% { -webkit-transform: scale(0.1); opacity: 0; }
+}
+
+@-moz-keyframes StarWars {
+  0% { -moz-transform: scale(1); opacity: 1; }
+  50% { opacity: 1; }
+  100% { -moz-transform: scale(0.1); opacity: 0; }
+}
+
+@-ms-keyframes StarWars {
+  0% { -ms-transform: scale(1); opacity: 1; }
+  50% { opacity: 1; }
+  100% { -ms-transform: scale(0.1); opacity: 0; }
+}
+
+@-o-keyframes StarWars {
+  0% { -o-transform: scale(1); opacity: 1; }
+  50% { opacity: 1; }
+  100% { -o-transform: scale(0.1); opacity: 0; }
+}
+
+@keyframes StarWars {
+  0% { transform: scale(1); opacity: 1; }
+  50% { opacity: 1; }
+  100% { transform: scale(0.1); opacity: 0; }
+}
+
+#main {
+  position: absolute;
+  width: 18em;
+  height: 50em;
+  bottom: 0;
+  left: 50%;
+  margin-left: -9em;
+  overflow: hidden;
+  font-size: 385%;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transform: perspective(280px) rotateX(25deg);
+  -moz-transform: perspective(280px) rotateX(25deg);
+  -ms-transform: perspective(280px) rotateX(25deg);
+  -o-transform: perspective(280px) rotateX(25deg);
+  transform: perspective(280px) rotateX(25deg);
+}
+
+#main:after {
+  position: absolute;
+  content: ' ';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 60%;
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+  background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+  background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+#scrolledcontent {
+  position: absolute;
+  top: 100%;
+  opacity: 0.4;
+  -webkit-animation: scroll 235s linear 4s infinite;
+  -moz-animation: scroll 235s linear 4s infinite;
+  -ms-animation: scroll 235s linear 4s infinite;
+  -o-animation: scroll 235s linear 4s infinite;
+  animation: scroll 235s linear 4s infinite;
+}
+
+#user_input {
+  position: absolute;
+  top: 100%;
+  margin-top: 2.74em;
+  -webkit-animation: scroll 235s linear 4s infinite;
+  -moz-animation: scroll 235s linear 4s infinite;
+  -ms-animation: scroll 235s linear 4s infinite;
+  -o-animation: scroll 235s linear 4s infinite;
+  animation: scroll 235s linear 4s infinite;
+}
+
+@-webkit-keyframes scroll {
+  0% { top: 100%; }
+  100% { top: -170%; }
+}
+
+@-moz-keyframes scroll {
+  0% { top: 100%; }
+  100% { top: -170%; }
+}
+
+@-ms-keyframes scroll {
+  0% { top: 100%; }
+  100% { top: -170%; }
+}
+
+@-o-keyframes scroll {
+  0% { top: 100%; }
+  100% { top: -170%; }
+}
+
+@keyframes scroll {
+  0% { top: 100%; }
+  100% { top: -170%; }
+}
+
+iframe  {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  opacity: 0;
+}
+
+#center {
+  text-align: center;
+}
+
+#instructions, #error_instructions {
+  font-weight: 700;
+  font-size: 100%;
+}
+
+#instructions {
+  position: absolute;
+  left: 3%;
+  top: 5%;
+}
+
+#error_instructions {
+  position: absolute;
+  left: 3%;
+  top: 8.5%;
+}
+
+#errors {
+  font-size: 100%;
+  margin-left: 1em;
+}
+
+.race-stats {
+  margin-top: 3em;
+  text-align: center;
+}
