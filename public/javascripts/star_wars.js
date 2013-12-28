@@ -7,7 +7,7 @@ $(window).keydown(function(e) {
 var Logger = {
 	race_text: [],
 	loadRaceText: function(){
-		return document.getElementById("race_text").innerText.split(""); 
+		return document.getElementById("race_text").textContent.split("");
 	},
 	removeFirstLetter: function(){
 		race_text.shift();
