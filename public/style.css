@@ -200,7 +200,6 @@ h1 span {
   100% { top: -170%; }
 }
 
-
 iframe  {
   position: absolute;
   left: 0px;
@@ -216,6 +215,7 @@ iframe  {
   font-weight: 700;
   font-size: 100%;
 }
+
 #instructions {
   position: absolute;
   left: 3%;
@@ -236,6 +236,4 @@ iframe  {
 .race-stats {
   margin-top: 3em;
   text-align: center;
-
 }
-
