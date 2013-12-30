@@ -200,7 +200,6 @@ h1 span {
   100% { top: -170%; }
 }
 
-
 iframe  {
   position: absolute;
   left: 0px;
@@ -236,5 +235,4 @@ iframe  {
 .race-stats {
   margin-top: 3em;
   text-align: center;
-
 }
