@@ -7,7 +7,7 @@ $(window).keydown(function(e) {
 var Logger = {
 	race_text: [],
 	loadRaceText: function(){
-		return document.getElementById("race_text").innerText.split(""); 
+		return document.getElementById("race_text").innerText.split("");
 	},
 	removeFirstLetter: function(){
 		race_text.shift();
@@ -21,7 +21,6 @@ var Logger = {
 	userProgress: function() {
 		return this.keysPressed;
 	},
-
 	// accuracy: function() {
 	// 	var total_race_letters = document.getElementById('race_text').innerText.split("").length;
 	// 	var accuracy = ((total_race_letters - Logger.errors) / total_race_letters) * 100;
