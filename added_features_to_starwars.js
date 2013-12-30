@@ -21,12 +21,11 @@ var Logger = {
 	userProgress: function() {
 		return this.keysPressed;
 	},
-
-	accuracy: function() {
-		var total_race_letters = document.getElementById('race_text').innerText.split("").length;
-		var accuracy = ((total_race_letters - Logger.errors) / total_race_letters) * 100;
-		return Math.floor(accuracy);
-	}
+	// accuracy: function() {
+	// 	var total_race_letters = document.getElementById('race_text').innerText.split("").length;
+	// 	var accuracy = ((total_race_letters - Logger.errors) / total_race_letters) * 100;
+	// 	return Math.floor(accuracy);
+	// }
 }
 
 race_text = Logger.loadRaceText();
@@ -47,9 +46,9 @@ var StarWarsRacerApp ={
 			this.refreshErrors();
 			this.refreshAccuracy();
 		}
-		if(race_text.length === 1){
-			this.displayRaceStats();
-		}
+		// if(race_text.length < 1){
+		// 	this.displayRaceStats();
+		// }
 	},
 	logNewError: function(){
 		if (correct){
@@ -64,20 +63,21 @@ var StarWarsRacerApp ={
 			return false;
 		};
 	},
-	displayRaceStats: function(){
-		$(".race-stats").append("<div> Congratulations on finishing the Star Wars Racer! <br/></div>");
-		$(".race-stats").append("<div> You made a total of: <br/>"+Logger.errors+" errors </div>");
-		$(".race-stats").append("<div> You finished with an accuracy of: <br/>"+Logger.accuracy()+"%</div>");
-	},
+	// displayRaceStats: function(){
+	// 	$("#race-stats").append("<h2> Congratulations on finishing the Star Wars Racer! </h2>");
+	// 	$("#race-stats").append("<h2> You made a total of: "+Logger.errors+" errors </h2>");
+	// 	$("#race-stats").append("<h3> You finished with an accuracy of: "+Logger.accuracy()+"%</h3>");
+	// },
 	refreshProgress: function(){
 		$("#typed").text(Logger.userProgress().join(""));
 	},
 	refreshErrors: function() {
-		$("#errors").text(Logger.errors);
+		$("#errors").text("Errors: " + Logger.errors);
 	},
-	refreshAccuracy: function(){
-		$("#accuracy").text("Accuracy: " + Logger.accuracy() + "%");
-	},
+	// refreshAccuracy: function(){
+	// 	console.log("We're in accuracy");
+	// 	$("#accuracy").text("Accuracy: " + Logger.accuracy() + "%");
+	// },
 	bindKeyEvent: function(){
 		var self = this
 		document.addEventListener('keypress', function(event){
