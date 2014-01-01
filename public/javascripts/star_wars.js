@@ -3,7 +3,7 @@ var $ = function (query) {
 };
 
 window.addEventListener('keydown', function(e) {
-	if(e.which === 8){
+	if(e.keyCode === e.DOM_VK_BACK_SPACE){ // virtual keycodes are deprecated, but work cross browser
 		e.preventDefault();
 	}
 });
@@ -11,7 +11,9 @@ window.addEventListener('keydown', function(e) {
 var Logger = {
 	race_text: [],
 	loadRaceText: function(){
-		return document.getElementById("race_text").innerText.split("");
+		var text = document.getElementById("race_text").innerText || document.getElementById("race_text").textContent;
+		text = text.replace(/\s+/g, ' ').trim();
+		return text.split("");
 	},
 	removeFirstLetter: function(){
 		race_text.shift();
@@ -27,7 +29,9 @@ var Logger = {
 	},
 
 	accuracy: function() {
-		var total_race_letters = document.getElementById('race_text').innerText.split("").length;
+		var total_race_text = document.getElementById('race_text').innerText || document.getElementById('race_text').textContent;
+		total_race_text = text.replace(/\s+/g, ' ').trim();
+		var total_race_letters = total_race_text.split("").length;
 		var accuracy = ((total_race_letters - Logger.errors) / total_race_letters) * 100;
 		return Math.floor(accuracy);
 	}
@@ -39,7 +43,8 @@ correct = true;
 
 var StarWarsRacerApp ={
 	handleKeyPress: function(event) {
-		var character = String.fromCharCode(event.keyCode);
+		event.preventDefault(); // catch any browser specific action
+		var character = String.fromCharCode(event.keyCode || event.charCode);
 		if (this.validCharacter(character) === true){
 			Logger.addKey(character);
 			race_text.shift();
