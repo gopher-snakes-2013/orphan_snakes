@@ -1,4 +1,8 @@
-$(window).keydown(function(e) {
+var $ = function (query) {
+	return document.querySelector(query) || document.createElement('div');
+};
+
+window.addEventListener('keydown', function(e) {
 	if(e.which === 8){
 		e.preventDefault();
 	}
@@ -65,18 +69,18 @@ var StarWarsRacerApp ={
 		};
 	},
 	displayRaceStats: function(){
-		$(".race-stats").append("<div> Congratulations on finishing the Star Wars Racer! <br/></div>");
-		$(".race-stats").append("<div> You made a total of: <br/>"+Logger.errors+" errors </div>");
-		$(".race-stats").append("<div> You finished with an accuracy of: <br/>"+Logger.accuracy()+"%</div>");
+		$(".race-stats").insertAdjacentHTML('beforeend', "<div> Congratulations on finishing the Star Wars Racer! <br/></div>");
+		$(".race-stats").insertAdjacentHTML('beforeend', "<div> You made a total of: <br/>"+Logger.errors+" errors </div>");
+		$(".race-stats").insertAdjacentHTML('beforeend', "<div> You finished with an accuracy of: <br/>"+Logger.accuracy()+"%</div>");
 	},
 	refreshProgress: function(){
-		$("#typed").text(Logger.userProgress().join(""));
+		$("#typed").textContent = Logger.userProgress().join("");
 	},
 	refreshErrors: function() {
-		$("#errors").text(Logger.errors);
+		$("#errors").textContent = Logger.errors;
 	},
 	refreshAccuracy: function(){
-		$("#accuracy").text("Accuracy: " + Logger.accuracy() + "%");
+		$("#accuracy").textContent = "Accuracy: " + Logger.accuracy() + "%";
 	},
 	bindKeyEvent: function(){
 		var self = this
